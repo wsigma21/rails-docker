@@ -9,7 +9,7 @@ Railsプロジェクトをdocker化する課題です。
   git clone <repository URL>
   ```
 
-2. アプリを起動する
+2. rails-docker/でアプリを起動する
 
   ```bash
   docker-compose up
