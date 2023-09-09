@@ -17,6 +17,13 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  # host名がdocker-compose.ymlのサービス名になる
+  host: db
+  username: postgres
+  # デフォルトのポート
+  port: 5432
+  # 環境変数はホスト側（docker-compose.yml）から読み取る
+  password: <%= ENV.fetch("DATABASE_PASSWORD") %>
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
